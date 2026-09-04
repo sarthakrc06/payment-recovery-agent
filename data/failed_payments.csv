@@ -1,0 +1,71 @@
+transaction_id,timestamp,amount_inr,payment_method,error_code,error_message
+pay_100001,2026-06-10 07:54:00,5696.79,Card,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Transaction declined: insufficient funds
+pay_100002,2026-06-20 21:37:00,890.46,Card,RISK_ENGINE_BLOCKED,Payment flagged for manual review
+pay_100003,2026-07-24 15:16:00,5627.95,Card,CARD_EXPIRED,Card has expired
+pay_100004,2026-06-26 07:01:00,10651.97,Netbanking,OTP_TIMEOUT,OTP entry timed out
+pay_100005,2026-06-09 19:16:00,2454.73,Card,CARD_EXPIRED,Transaction declined: card expiry date invalid
+pay_100006,2026-07-19 19:24:00,18283.83,Card,SESSION_EXPIRED,Payment session expired before completion
+pay_100007,2026-07-27 07:10:00,20760.71,Netbanking,GATEWAY_ERROR_INSUFFICIENT_BALANCE,Payment failed due to insufficient balance in account
+pay_100008,2026-06-27 08:10:00,16582.39,Card,OTP_TIMEOUT,OTP entry timed out
+pay_100009,2026-07-28 20:40:00,7057.64,Netbanking,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Payment failed due to insufficient balance in account
+pay_100010,2026-06-25 07:13:00,5356.25,UPI,OTP_TIMEOUT,Payment session expired before completion
+pay_100011,2026-06-25 13:42:00,11637.17,Card,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Payment failed due to insufficient balance in account
+pay_100012,2026-06-03 22:07:00,5841.84,Card,RISK_ENGINE_BLOCKED,Payment flagged for manual review
+pay_100013,2026-07-22 15:01:00,5392.92,Card,SESSION_EXPIRED,Payment session expired before completion
+pay_100014,2026-07-29 12:19:00,22134.38,UPI,OTP_TIMEOUT,Payment session expired before completion
+pay_100015,2026-07-22 02:19:00,6278.69,UPI,GATEWAY_TIMEOUT,Gateway timeout while processing payment
+pay_100016,2026-06-13 14:11:00,9145.61,UPI,FRAUD_SUSPECTED,Payment flagged for manual review
+pay_100017,2026-06-14 21:53:00,21548.41,Card,FRAUD_SUSPECTED,Transaction blocked by risk engine
+pay_100018,2026-07-13 14:28:00,9633.24,Card,GATEWAY_ERROR_EXPIRED_CARD,Card has expired
+pay_100019,2026-07-19 21:01:00,17090.5,Card,FRAUD_SUSPECTED,Transaction blocked by risk engine
+pay_100020,2026-07-12 07:10:00,10953.92,UPI,SESSION_EXPIRED,OTP entry timed out
+pay_100021,2026-06-28 03:57:00,21782.39,Card,GATEWAY_ERROR_INSUFFICIENT_BALANCE,Payment failed due to insufficient balance in account
+pay_100022,2026-07-20 02:17:00,19098.39,UPI,RISK_ENGINE_BLOCKED,Transaction blocked by risk engine
+pay_100023,2026-07-04 00:56:00,634.0,UPI,RISK_ENGINE_BLOCKED,Payment flagged for manual review
+pay_100024,2026-06-08 04:02:00,21968.54,Card,OTP_TIMEOUT,OTP entry timed out
+pay_100025,2026-07-14 06:16:00,3340.53,Card,GATEWAY_ERROR_INSUFFICIENT_BALANCE,Payment failed due to insufficient balance in account
+pay_100026,2026-07-20 02:06:00,24114.42,UPI,RISK_ENGINE_BLOCKED,Payment flagged for manual review
+pay_100027,2026-07-18 02:39:00,11036.79,Card,GATEWAY_ERROR_EXPIRED_CARD,Transaction declined: card expiry date invalid
+pay_100028,2026-06-02 21:57:00,1741.04,UPI,GATEWAY_TIMEOUT,Bank server not responding
+pay_100029,2026-07-28 10:39:00,1914.18,Card,RISK_ENGINE_BLOCKED,Transaction blocked by risk engine
+pay_100030,2026-06-07 10:47:00,21511.94,Card,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Payment failed due to insufficient balance in account
+pay_100031,2026-06-13 01:02:00,5473.78,UPI,RISK_ENGINE_BLOCKED,Payment flagged for manual review
+pay_100032,2026-06-18 07:57:00,20216.3,UPI,FRAUD_SUSPECTED,Transaction blocked by risk engine
+pay_100033,2026-07-13 12:13:00,10675.93,Netbanking,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Transaction declined: insufficient funds
+pay_100034,2026-06-10 22:42:00,18246.11,Netbanking,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Payment failed due to insufficient balance in account
+pay_100035,2026-06-17 16:50:00,3633.53,Card,CARD_EXPIRED,Card has expired
+pay_100036,2026-07-21 02:12:00,11161.8,Card,SESSION_EXPIRED,OTP entry timed out
+pay_100037,2026-06-22 12:22:00,23170.22,Card,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Payment failed due to insufficient balance in account
+pay_100038,2026-07-07 12:05:00,5461.62,Card,GATEWAY_ERROR_EXPIRED_CARD,Transaction declined: card expiry date invalid
+pay_100039,2026-06-25 03:20:00,24634.92,Card,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Transaction declined: insufficient funds
+pay_100040,2026-06-28 00:10:00,3996.7,Netbanking,BANK_SERVER_ERROR,Gateway timeout while processing payment
+pay_100041,2026-07-24 04:09:00,1570.56,Card,CARD_EXPIRED,Card has expired
+pay_100042,2026-06-07 05:41:00,21305.86,UPI,GATEWAY_TIMEOUT,Bank server not responding
+pay_100043,2026-07-22 20:28:00,3129.18,UPI,RISK_ENGINE_BLOCKED,Transaction blocked by risk engine
+pay_100044,2026-07-22 10:45:00,16485.72,Card,CARD_EXPIRED,Card has expired
+pay_100045,2026-06-29 14:20:00,16792.69,Card,FRAUD_SUSPECTED,Payment flagged for manual review
+pay_100046,2026-06-28 07:21:00,16841.5,Card,GATEWAY_ERROR_EXPIRED_CARD,Transaction declined: card expiry date invalid
+pay_100047,2026-07-22 05:52:00,11538.4,UPI,BANK_SERVER_ERROR,Bank server not responding
+pay_100048,2026-07-02 18:25:00,3441.55,Netbanking,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Payment failed due to insufficient balance in account
+pay_100049,2026-07-20 10:40:00,4070.01,Netbanking,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Transaction declined: insufficient funds
+pay_100050,2026-06-13 05:21:00,2724.12,Netbanking,OTP_TIMEOUT,Payment session expired before completion
+pay_100051,2026-06-25 18:57:00,13897.61,Netbanking,OTP_TIMEOUT,OTP entry timed out
+pay_100052,2026-06-25 00:40:00,17234.3,Card,OTP_TIMEOUT,Payment session expired before completion
+pay_100053,2026-07-09 13:18:00,2443.62,Card,FRAUD_SUSPECTED,Payment flagged for manual review
+pay_100054,2026-07-28 23:47:00,19312.31,UPI,OTP_TIMEOUT,OTP entry timed out
+pay_100055,2026-07-22 01:19:00,17685.84,Netbanking,OTP_TIMEOUT,Payment session expired before completion
+pay_100056,2026-07-04 14:33:00,13707.92,Card,BAD_REQUEST_ERROR_INSUFFICIENT_FUNDS,Payment failed due to insufficient balance in account
+pay_100057,2026-07-04 04:35:00,1189.45,Card,RISK_ENGINE_BLOCKED,Payment flagged for manual review
+pay_100058,2026-06-23 17:06:00,5370.4,Netbanking,UNRECOGNIZED_CODE_2684,Payment could not be completed - not enough balance available
+pay_100059,2026-07-07 23:44:00,22120.75,Netbanking,UNRECOGNIZED_CODE_3532,The one-time password window closed before verification
+pay_100060,2026-06-17 02:46:00,24408.72,Card,UNRECOGNIZED_CODE_7755,Your card's validity period has ended
+pay_100061,2026-07-01 05:40:00,18453.63,Card,UNRECOGNIZED_CODE_7745,Payment could not be completed - not enough balance available
+pay_100062,2026-06-10 20:08:00,4106.07,Card,UNRECOGNIZED_CODE_7267,Your card's validity period has ended
+pay_100063,2026-07-12 21:32:00,5677.48,Netbanking,UNRECOGNIZED_CODE_6728,Payment could not be completed - not enough balance available
+pay_100064,2026-06-18 13:53:00,5689.65,Card,UNRECOGNIZED_CODE_7528,The one-time password window closed before verification
+pay_100065,2026-06-26 09:45:00,21629.17,UPI,UNRECOGNIZED_CODE_6753,The one-time password window closed before verification
+pay_100066,2026-07-19 19:22:00,17036.03,UPI,UNRECOGNIZED_CODE_6425,This payment was stopped by our fraud prevention checks
+pay_100067,2026-06-24 18:37:00,21944.4,Card,UNRECOGNIZED_CODE_3925,Payment could not be completed - not enough balance available
+pay_100068,2026-07-25 07:13:00,1100.69,UPI,PROCESSING_ERROR_9921,Payment could not be processed at this time
+pay_100069,2026-06-29 13:14:00,18254.34,Netbanking,UNKNOWN_DECLINE,Transaction was not approved
+pay_100070,2026-07-23 11:34:00,9722.11,UPI,GATEWAY_ERR_MISC,"Something went wrong, please contact support"

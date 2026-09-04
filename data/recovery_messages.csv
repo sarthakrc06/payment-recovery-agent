@@ -1,0 +1,51 @@
+transaction_id,predicted_root_cause,customer_message
+pay_100001,insufficient_funds,Your payment of Rs 21973.13 couldn't be completed due to low balance. Please try another card or UPI method to finish!
+pay_100002,otp_session_timeout,Your OTP for Rs 6724.91 expired before completion. Tap here to request a new OTP and complete your payment quickly!
+pay_100003,insufficient_funds,Your payment of Rs 20865.78 didn't go through due to insufficient balance. Please try a different account or payment method.
+pay_100004,insufficient_funds,Payment of Rs 16107.10 failed due to low account balance. Please try using another payment option to complete your purchase.
+pay_100005,expired_card,Your card appears to be expired for Rs 24040.48. Please update your card details or select a different payment method.
+pay_100006,risk_block,(internal escalation -- no customer message sent)
+pay_100007,gateway_method_degraded,Your bank's network is experiencing issues for Rs 24754.70. Please try again using a different payment option like UPI.
+pay_100008,expired_card,Your card has expired for the payment of Rs 1200.35. Please update your payment details or switch to another card.
+pay_100009,gateway_method_degraded,Your bank server is responding slowly for Rs 5356.22. Please retry using another payment option to complete your transaction.
+pay_100010,insufficient_funds,Your payment of Rs 3816.98 was unsuccessful due to low balance. Try paying with a different account or UPI.
+pay_100011,risk_block,(internal escalation -- no customer message sent)
+pay_100012,gateway_method_degraded,Your bank connection was slow for Rs 21447.30. Please try completing your payment with a different payment mode.
+pay_100013,otp_session_timeout,Your OTP timed out for Rs 1419.82. Tap here to get a new OTP and complete your payment immediately!
+pay_100014,gateway_method_degraded,We experienced a bank network delay for Rs 21052.87. Please retry using another payment option to complete your payment.
+pay_100015,insufficient_funds,Payment of Rs 14123.28 didn't complete due to low balance. Please try another card or account to finish your purchase.
+pay_100016,expired_card,It looks like your card is expired for Rs 11392.34. Update your card details or choose another payment method to finish.
+pay_100017,risk_block,(internal escalation -- no customer message sent)
+pay_100018,expired_card,Your card for Rs 8911.35 has expired. Please update your card info or try a different payment option.
+pay_100019,gateway_method_degraded,Your bank service is currently slow for Rs 11400.02. Please retry using UPI or a different payment method.
+pay_100020,risk_block,(internal escalation -- no customer message sent)
+pay_100021,otp_session_timeout,OTP session expired for your payment of Rs 13527.47. Tap now to resend OTP and complete your order!
+pay_100022,gateway_method_degraded,Bank network issues interrupted your payment of Rs 6865.74. Please try again using another payment option.
+pay_100023,insufficient_funds,Payment of Rs 19465.36 was declined due to low balance. Please use another card or UPI mode to complete payment.
+pay_100024,otp_session_timeout,Your OTP timed out for Rs 21017.76. Request a new OTP now to complete your payment quickly!
+pay_100025,insufficient_funds,Your payment of Rs 18275.43 failed due to low balance. Please switch to another payment method to try again.
+pay_100026,risk_block,(internal escalation -- no customer message sent)
+pay_100027,otp_session_timeout,Your OTP expired for Rs 18632.01. Click here to receive a fresh OTP and complete your payment.
+pay_100028,expired_card,Your card has expired for Rs 8525.24. Update your card details or select a new payment method to proceed.
+pay_100029,gateway_method_degraded,Your bank network is slow for Rs 16905.81. Please retry with a different card or UPI to finish your payment.
+pay_100030,expired_card,Your card is expired for Rs 10913.25. Please enter updated card details or use a different payment mode.
+pay_100031,insufficient_funds,Insufficient balance for Rs 21861.48. Kindly add funds or choose an alternate payment method to complete payment.
+pay_100032,risk_block,(internal escalation -- no customer message sent)
+pay_100033,insufficient_funds,Your Rs 20381.76 transaction couldn't go through due to low funds. Try another account or UPI to finish!
+pay_100034,insufficient_funds,Payment of Rs 16286.69 failed due to insufficient funds. Please select another payment option to complete your purchase.
+pay_100035,risk_block,(internal escalation -- no customer message sent)
+pay_100036,insufficient_funds,Your Rs 9806.49 payment was declined for low balance. Please try paying via another card or UPI account.
+pay_100037,gateway_method_degraded,Temporary bank network delay for Rs 4229.14. Try using a different payment option to finish your transaction.
+pay_100038,insufficient_funds,Payment of Rs 13070 couldn't be completed due to low funds. Please select an alternate account to proceed.
+pay_100039,gateway_method_degraded,Bank servers are slow for Rs 7732.54. Try completing your payment using another mode like net banking or UPI.
+pay_100040,insufficient_funds,Low balance for Rs 15445.77 payment. Please try using another account or payment option to complete it.
+pay_100041,otp_session_timeout,Your OTP timed out for Rs 23725.16. Tap to generate a new OTP and complete your transaction right away!
+pay_100042,otp_session_timeout,OTP expired for Rs 3335.41. Request a new OTP now to complete your payment in seconds!
+pay_100043,otp_session_timeout,Your OTP timed out for Rs 14463.57. Tap here to retry with a new OTP and finish your purchase.
+pay_100044,gateway_method_degraded,Bank network connection was slow for Rs 11196.64. Please try paying with another card or UPI.
+pay_100045,expired_card,Your card is expired for Rs 1340.51. Update your card info or choose another payment method to complete.
+pay_100046,otp_session_timeout,Your OTP expired for Rs 5667.20. Get a new OTP now to complete your transaction!
+pay_100047,gateway_method_degraded,Bank response issue for Rs 15120.65. Please select a different payment option like UPI to complete your payment.
+pay_100048,risk_block,(internal escalation -- no customer message sent)
+pay_100049,otp_session_timeout,OTP timed out for Rs 22398.19. Tap here to resend OTP and finalize your payment quickly!
+pay_100050,otp_session_timeout,Your OTP for Rs 3977.76 expired. Tap here to get a new OTP and complete your payment.
