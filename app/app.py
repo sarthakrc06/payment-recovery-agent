@@ -21,6 +21,19 @@ from src.recover import run_recovery, ACTION_FOR_CATEGORY
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 GEMINI_KEY_PRESENT = bool(os.environ.get("GEMINI_API_KEY"))
 
+def render_html(content: str):
+    """
+    Renders an HTML string via st.markdown, stripping leading whitespace from
+    every line first. Streamlit/CommonMark treats any line starting with 4+
+    spaces as an indented code block rather than raw HTML -- this happens
+    naturally when the HTML template is written inside an indented Python
+    block (e.g. inside `with tab:` or `else:`). Stripping avoids that
+    misinterpretation regardless of how the calling code is indented.
+    """
+    lines = [line.strip() for line in content.strip(chr(10)).splitlines()]
+    st.markdown(chr(10).join(lines), unsafe_allow_html=True)
+
+
 st.set_page_config(
     page_title="Payment Failure Recovery Agent",
     page_icon="💳",
@@ -31,7 +44,7 @@ st.set_page_config(
 # ---------------------------------------------------------------------------
 # Styling & Theme Configuration (Razorpay Fintech Modern Aesthetic)
 # ---------------------------------------------------------------------------
-st.markdown("""
+render_html("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -721,12 +734,12 @@ st.markdown("""
         opacity: 0.8;
     }
 </style>
-""", unsafe_allow_html=True)
+""")
 
 # ---------------------------------------------------------------------------
 # Hero Header
 # ---------------------------------------------------------------------------
-st.markdown("""
+render_html("""
 <div class="hero">
     <div class="hero-top-row">
         <div class="hero-badge">
@@ -750,7 +763,7 @@ st.markdown("""
         <span class="hero-pill">💬 Contextual Customer Messaging</span>
     </div>
 </div>
-""", unsafe_allow_html=True)
+""")
 
 # ---------------------------------------------------------------------------
 # Sidebar Controls & Dataset Selection
@@ -882,7 +895,7 @@ if "results" in st.session_state:
         col4.metric("Transactions recovered", f"{recovered_count}/{len(df)}")
 
         # Visual Recovery Progress Bar
-        st.markdown(f"""
+        render_html(f"""
         <div class="recovery-progress-card">
             <div class="progress-header">
                 <span class="progress-title"><b>Overall Portfolio Recovery Progress</b></span>
@@ -892,16 +905,16 @@ if "results" in st.session_state:
                 <div class="progress-bar-fill" style="width: {min(recovery_rate, 100.0):.1f}%;"></div>
             </div>
         </div>
-        """, unsafe_allow_html=True)
+        """)
 
         if have_ground_truth and "classification_correct" in df.columns:
             accuracy = df["classification_correct"].mean() * 100
-            st.markdown(f"""
+            render_html(f"""
             <div class="accuracy-banner">
                 <span class="accuracy-badge">BENCHMARK AUDITED</span>
                 <span>Classifier accuracy against ground truth: <b>{accuracy:.1f}%</b> ({int(accuracy)}% of drop-offs correctly attributed)</span>
             </div>
-            """, unsafe_allow_html=True)
+            """)
 
         st.markdown('<div class="tab-section-header">Recovery Rate by Predicted Category</div>', unsafe_allow_html=True)
         by_category = (
@@ -947,15 +960,14 @@ if "results" in st.session_state:
 
         st.caption(f"Showing **{len(filtered):,}** of **{len(df):,}** transactions matching active filters")
         html_table = filtered[display_cols].rename(columns=rename).to_html(escape=False, index=False)
-        st.markdown(
-            f'<div class="custom-table-container"><div style="max-height: 520px; overflow-y: auto;">{html_table}</div></div>',
-            unsafe_allow_html=True,
+        render_html(
+            f'<div class="custom-table-container"><div style="max-height: 520px; overflow-y: auto;">{html_table}</div></div>'
         )
 
     with tab3:
         unresolved = df[df["amount_recovered"] == 0]
         if len(unresolved) == 0:
-            st.markdown("""
+            render_html("""
             <div class="success-banner">
                 <div class="banner-icon">🎉</div>
                 <div>
@@ -963,9 +975,9 @@ if "results" in st.session_state:
                     <div class="banner-sub">Every failed payment in this dataset was successfully recovered or resolved by the agent.</div>
                 </div>
             </div>
-            """, unsafe_allow_html=True)
+            """)
         else:
-            st.markdown(f"""
+            render_html(f"""
             <div class="exception-alert-banner">
                 <div class="alert-icon">🛡️</div>
                 <div class="alert-body">
@@ -973,12 +985,12 @@ if "results" in st.session_state:
                     <div class="alert-sub">Deterministic stopping rules prevent blind retries on high-risk, unknown, or unrecoverable failures. Escalated to human review to protect user accounts.</div>
                 </div>
             </div>
-            """, unsafe_allow_html=True)
+            """)
 
             for _, row in unresolved.iterrows():
                 cause_str = str(row['predicted_root_cause'])
                 cause_label = cause_str.replace('_', ' ').title()
-                st.markdown(f"""
+                render_html(f"""
                 <div class="exception-card">
                     <div class="card-header">
                         <div class="card-meta">
@@ -992,11 +1004,11 @@ if "results" in st.session_state:
                         <div class="reasoning-text">{row['reasoning']}</div>
                     </div>
                 </div>
-                """, unsafe_allow_html=True)
+                """)
 
     with tab4:
         if not customer_messages:
-            st.markdown("""
+            render_html("""
             <div class="empty-messages-banner">
                 <div class="banner-icon">💬</div>
                 <div>
@@ -1004,16 +1016,16 @@ if "results" in st.session_state:
                     <div class="banner-sub">Enable <b>"Triage ambiguous cases"</b> with your <b>GEMINI_API_KEY</b> in the sidebar and re-run the pipeline to generate automated, empathetic customer recovery messages.</div>
                 </div>
             </div>
-            """, unsafe_allow_html=True)
+            """)
         else:
-            st.markdown(f"""
+            render_html(f"""
             <div class="messages-header-banner">
                 <div>
                     <div class="messages-header-title">Customer Recovery Messages (Gemini AI)</div>
                     <div class="messages-header-sub">Empathetic, context-aware notification drafts generated in a single batched call — tailored to the specific failure cause.</div>
                 </div>
             </div>
-            """, unsafe_allow_html=True)
+            """)
             actionable = df[df["predicted_root_cause"] != "risk_block"]
             for _, row in actionable.iterrows():
                 msg = customer_messages.get(row["transaction_id"], "")
@@ -1021,7 +1033,7 @@ if "results" in st.session_state:
                     continue
                 cause_str = str(row['predicted_root_cause'])
                 cause_label = cause_str.replace('_', ' ').title()
-                st.markdown(f"""
+                render_html(f"""
                 <div class="customer-msg-card">
                     <div class="msg-card-top">
                         <div class="msg-meta-group">
@@ -1035,10 +1047,10 @@ if "results" in st.session_state:
                         <div class="bubble-content">{msg}</div>
                     </div>
                 </div>
-                """, unsafe_allow_html=True)
+                """)
 else:
     # Hackathon-ready welcome state
-    st.markdown("""
+    render_html("""
     <div class="welcome-container">
         <div class="welcome-header">
             <div class="welcome-icon">⚡</div>
@@ -1081,4 +1093,4 @@ else:
             <span><b>Ready to test?</b> Click <b>"▶ Run Recovery Pipeline"</b> in the sidebar to simulate autonomous recovery on the dataset.</span>
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """)
